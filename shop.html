@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Mall.com</title>
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+
+  <div class="header">
+    <h1>OnlineMall.com</h1>
+  
+   <input type="search" placeholder="search-item" class="srch" onkeyup="searchItem(this.value)">
+
+  <i class="material-icons" style="font-size:40px" id="i1" onclick="showCart()">shopping_cart</i><span>0</span>
+  <i class="material-icons" style="font-size:40px" id="i2" onclick="showModal1()">add</i>
+     <button onclick="showFilter()" class="btn">filter</button>
+  </div>
+
+
+  <div class="container">
+
+    
+
+        
+  
+
+
+  </div>
+  <div class="modal">
+<i class="material-icons" onclick="closeModal()">close</i>
+
+<form onsubmit="addItem(event)" class="frm1">
+<input type="text" required placeholder="Name"  class="inp">
+<input type="text" required  placeholder="id" class="inp">
+<input type="text" required  placeholder="size"class="inp" >
+<input type="text"required  placeholder="color" class="inp" >
+<input type="text"required placeholder="price" class="inp" >
+<input type="text" required placeholder="image URL" class="inp">
+<input type="text" required placeholder="description" class="inp">
+<button type="submit" on>Add Item</button>
+
+</form>
+
+  </div>
+
+  <div class="modal1">
+    <h1 style="text-align: center; color:white;">CART ITEMS</h1>
+    <i class="material-icons" onclick="closeModal1()">close</i>
+    <div class="container"></div>
+  </div>
+
+ 
+
+  <div class="filter">
+    <i class="material-icons" onclick="closeFilter()">close</i>
+    <input type="text"  placeholder="minimum price.." class="inp1">
+    <input type="text"  placeholder="maximum price.." class="inp1">
+    <button onclick="searchFilter()">search-item</button>
+  </div>
+  
+
+
+
+
+
+
+
+  <script src="shop.js"></script>
+</body>
+</html>
